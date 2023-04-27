@@ -1,0 +1,58 @@
+body {
+	background-color: #eed3f1  ;
+	margin: 0;
+	font-family: 'Sigmar One', cursive;
+}
+
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  font-family: 'Sigmar One', cursive;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #cc9fde;
+}
+
+/*other example*/
+* {
+  box-sizing: border-box;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Sigmar One', cursive;
+}
+
+/* Style the content */
+.content {
+  padding: 10px;
+}
+
+/*for the page title*/
+#title { 
+	font-family: 'Sigmar One', cursive;
+	font-size: 150%;
+	text-shadow: 2px 2px 5px black;
+	color: #ff0000
+}
+
+/*for the buttons on the main page*/
+.buttons {
+	border-radius: 12px;
+	width: 25%;
+	color: #472045;
+	font-family: 'Sigmar One', cursive;
+	background-color: #f1e0f1
+}
+
+button:hover {background-color: purple;}

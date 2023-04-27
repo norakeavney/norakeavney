@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quiz On BMI Analysis</title>
+<link rel="stylesheet" href="Quiz.css">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1><center>Quiz On BMI Analysis</h1>
+
+<h2>Quiz 2. BMI Analysis</h2>
+<p>First year student activity on Moodle was collected from a sample of 10 students in week 4.
+The number of times a student logged onto Moodle is recorded below.
+Use Excel to answer the questions below.</p>
+
+<p>**N.B if decimal place is a zero do not include in answer!**</p>
+
+<p>Student (sample) Moodle logons
+11 , 16 , 3 , 17 , 6 , 22 , 45 , 5 , 5 , 15</p>
+
+<p>1.Describe central tendancy and variation of data (1 decimal place) <br>
+	(i) What is the mean number of times <br>
+	<input type="radio" name="q1" value="14.5"> 14.5 <br>
+	<input type="radio" name="q1" value="14.5" id="correct1"> 14.6 <br>
+	<input type="radio" name="q1" value="14.5"> 13.9 <br>
+</p>
+	
+<p>(ii) What is the standard deviation (sample) <br>
+	<input type="radio" name="q2" value="14.5"> 16 <br>
+	<input type="radio" name="q2" value="14.5" id="correct2"> 12.4 <br>
+	<input type="radio" name="q2" value="14.5"> 11	<br>						
+</p>
+
+<p>2. Inter Quartile Range (1 decimal place) <br>
+	What is the Inter Quartile Range  <br>
+	<input type="radio" name="q3" value="14.5"> 2 <br>
+	<input type="radio" name="q3" value="14.5"> 12.4 <br>
+	<input type="radio" name="q3" value="14.5" id="correct3"> 13.3 <br>																									
+</p>
+
+
+
+<p>4. Outlier Fence Calculations (1 decimal place) <br>
+	(i) What is the lower fence value <br>
+	<input type="radio" name="q4" value="14.9" id="correct4"> -14.9 <br>
+	<input type="radio" name="q4" value="14.9"> -12.9 <br>
+	<input type="radio" name="q4" value="14.9">  16.7 <br>
+</p>
+
+
+
+<p>(ii) What is the Upper fence value  <br>
+	<input type="radio" name="q5" value="1" id="correct5"> 38.3 <br>
+	<input type="radio" name="q5" value="1233"> 383 <br>
+	<input type="radio" name="q5" value="34"> 38566 <br>
+</p>
+
+<p>Use excel to create a Box Plot to confirm your calculations</p>
+
+<input type="submit" name="submit" value="Submit Quiz" onclick="result()">
+	
+
+</body>
+<script>
+	function result() {
+		var score=0;
+		if (document.getElementById('correct1').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct2').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct3').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct4').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct5').checked) 
+		{
+			score++;
+		}
+		alert("Your score is: "+score +" out of 5");
+	}
+</script>
+</html>

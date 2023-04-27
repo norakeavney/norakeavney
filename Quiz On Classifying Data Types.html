@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quiz On Classifying Data Types</title>
+<link rel="stylesheet" href="Quiz.css">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1><center>Quiz On Classifying Data Types</h1>
+
+<h2>Quiz 1. Classifying Data Types</h2>
+<p> Consider the following data collected from first year maths student feedback survey. Classify appropriately into types of data (complete table here) pick from list eg: shoe size = discrete data</p>
+<p>a) College Course<br>
+	<input type="radio" name="datatype" value="Ordinal"> Ordinal <br>
+	<input type="radio" name="datatype" value="Nominal" id="correct1"> Nominal <br>
+	<input type="radio" name="datatype" value="Continuous"> Continuous <br>
+	<input type="radio" name="datatype" value="Discrete"> Discrete <br>
+</p>
+
+<p>b) Student Mark (e.g: 67.5, 71.2...)<br>
+	<input type="radio" name="datatype2" value="Ordinal"> Ordinal <br>
+	<input type="radio" name="datatype2" value="Nominal"> Nominal <br>
+	<input type="radio" name="datatype2" value="Continuous" id="correct2"> Continuous <br>
+	<input type="radio" name="datatype2" value="Discrete"> Discrete <br>
+</p>
+
+<p>c) Gender<br>
+	<input type="radio" name="datatype3" value="Ordinal"> Ordinal <br>
+	<input type="radio" name="datatype3" value="Nominal" id="correct3"> Nominal <br>
+	<input type="radio" name="datatype3" value="Continuous"> Continuous <br>
+	<input type="radio" name="datatype3" value="Discrete"> Discrete <br>
+</p>
+
+<p>d) Student Grade (e.g: A, B, C...)<br>
+	<input type="radio" name="datatype4" value="Ordinal" id="correct4"> Ordinal <br>
+	<input type="radio" name="datatype4" value="Nominal"> Nominal <br>
+	<input type="radio" name="datatype4" value="Continuous"> Continuous <br>
+	<input type="radio" name="datatype4" value="Discrete"> Discrete <br>
+</p>
+
+<p>e) Number of Quiz Attempts (you can take as many as you like!)<br>
+	<input type="radio" name="datatype5" value="Ordinal"> Ordinal <br>
+	<input type="radio" name="datatype5" value="Nominal"> Nominal <br>
+	<input type="radio" name="datatype5" value="Continuous"> Continuous <br>
+	<input type="radio" name="datatype5" value="Discrete" id="correct5"> Discrete <br>
+</p>
+
+<input type="submit" name="submit" value="Submit Quiz" onclick="result()">
+	
+
+</body>
+<script>
+	function result() {
+		var score=0;
+		if (document.getElementById('correct1').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct2').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct3').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct4').checked) 
+		{
+			score++;
+		}
+		if (document.getElementById('correct5').checked) 
+		{
+			score++;
+		}
+		alert("Your score is: "+score +" out of 5");
+	}
+</script>
+</html>

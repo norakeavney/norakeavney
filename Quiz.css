@@ -1,0 +1,23 @@
+body {
+ background-image: url("questionmark3.webp");
+}
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  font-family: 'Sigmar One', cursive;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: Black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Sigmar One', cursive;
+  font-size: 150%;
+}
+

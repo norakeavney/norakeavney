@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="stylesheet.css">
+	<title>Excel Tutorials</title>
+
+</head>
+<body>
+	<div class="container" >
+		<div id="header">Excel Tutorials (Nora's Page)</div>
+		<div class="topnav"><center>
+		<a href="Homepage.html" target="_blank">Home</a>
+		<a href="mathsProj.html" target="_blank">Information on Statistics</a>
+		<a href="exceltuts.html" target="_blank">Excel "Fill in the blank" Section</a>
+		<a href="Maths Project.html" target="_blank">Statistics Quizzes</a>
+	</div>
+		<div class="box1" >
+		<h2>Test Your Knowledge</h2>
+		<i>Please answer in lowercase</i>
+		<br>
+			    Mean:<input id="mean"> 
+				<button onclick="correctAnswer()">Check Answer</button>
+				<h5 id="correctSpot"></h5>
+				
+			    Mode:<input id="mode"> 
+				<button onclick="correctAnswer2()">Check Answer</button>
+				<h5 id="correctSpot2"></h5>
+				
+			    Median:<input id="median"> 
+				<button onclick="correctAnswer3()">Check Answer</button>
+				<h5 id="correctSpot3"></h5>
+				
+
+			    Standard Deviation (population):<input id="stdvp"> 
+				<button onclick="correctAnswer4()">Check Answer</button>
+				<h5 id="correctSpot4"></h5>
+							
+			    Standard Deviation (sample):<input id="stdvs"> 
+				<button onclick="correctAnswer5()">Check Answer</button>
+				<h5 id="correctSpot5"></h5>
+				
+			    Range:<input id="range"> 
+				<button onclick="correctAnswer6()">Check Answer</button>
+				<h5 id="correctSpot6"></h5>
+				
+				Interquartile range (IQR):<input id="iqr"> 
+				<button onclick="correctAnswer7()">Check Answer</button>
+				<h5 id="correctSpot7"></h5>
+				
+			<!-- 5 num summary quiz section -->
+			<h2>5 Numbery Summary Section</h2>
+			<p>Uppercase for Quartile Answers</p>
+				Minimum:<input id="min"> 
+				<button onclick="correctAnswer8()">Check Answer</button>
+				<h5 id="correctSpot8"></h5>
+				
+				Quartile 1:<input id="q1"> 
+				<button onclick="correctAnswer9()">Check Answer</button>
+				<h5 id="correctSpot9"></h5>
+				
+				Median (hint Quartile 2):<input id="q2"> 
+				<button onclick="correctAnswer10()">Check Answer</button>
+				<h5 id="correctSpot10"></h5>
+				
+				Quartile 3:<input id="q3"> 
+				<button onclick="correctAnswer11()">Check Answer</button>
+				<h5 id="correctSpot11"></h5>
+				
+				Quartile 4:<input id="q4"> 
+				<button onclick="correctAnswer12()">Check Answer</button>
+				<h5 id="correctSpot12"></h5>
+				
+			<!-- Fences quiz section -->
+			<h2>Fences Section</h2>
+				Low Fence:<input id="lowf"> 
+				<button onclick="correctAnswer13()">Check Answer</button>
+				<h5 id="correctSpot13"></h5>
+				
+				Upper Fence:<input id="upf"> 
+				<button onclick="correctAnswer14()">Check Answer</button>
+				<h5 id="correctSpot14"></h5>
+				
+				
+				
+				<button onclick="total()"> Get Score</button>
+		</div>
+		
+		<div class="box2">
+		<h2>How-To Videos (ft.Etain)</h2>
+		Scroll through and click image to be redirected to microsoft stream
+			<a href="https://web.microsoftstream.com/video/0ac23e22-f9e8-4b00-918a-c9e4f023a0da" target="_blank">
+			<img class="mySlides" src="5numbersum.png"></a>
+			<a href="https://web.microsoftstream.com/video/7e215f9d-b4df-4835-bfe9-275b63a140b9" target="_blank">
+			<img class="mySlides" src="boxplot.jfif"></a>
+			<a href="https://web.microsoftstream.com/video/af756c62-7e21-4e6e-974f-90ad096d7431" target="_blank">
+			<img class="mySlides" src="coeffvar.jfif"></a>
+			<a href="https://web.microsoftstream.com/video/e3c48209-9e83-47a2-9490-f72bba3d57c2" target="_blank">
+			<img class="mySlides" src="cumfreq.png"></a>
+			<a href="https://web.microsoftstream.com/video/653da916-a9c8-4def-9302-0852322c7424" target="_blank">
+			<img class="mySlides" src="meanfreq.png"></a>
+			<a href="https://web.microsoftstream.com/video/6070b9e5-3871-452c-a9c3-ea4df0e34974" target="_blank">
+			<img class="mySlides" src="meanmm.png"></a>
+			<a href="https://web.microsoftstream.com/video/cd2073ad-7980-476a-8048-4c6dd51aa1eb" target="_blank">
+			<img class="mySlides" src="medianest.png"></a>
+			<a href="https://web.microsoftstream.com/video/631e9874-8a19-415d-9fa1-a7e0aba0e732" target="_blank">
+			<img class="mySlides" src="outliers.png"></a>
+			<a href="https://web.microsoftstream.com/video/8c38534a-5235-48d9-b151-7b76d784a729" target="_blank">
+			<img class="mySlides" src="variation.jfif"></a>
+			<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+		</div>
+		
+		
+		<div id="bottom" > 
+		<h3>Slaytistics © </h3>
+		</div>
+		
+
+		
+		
+		
+</body>
+</html>
+
+<script>
+//quiz functions
+let counter = 0;
+
+	function correctAnswer(){
+	let correctAns1 = "=average";
+	let answer1 = document.getElementById("mean").value;
+	
+	let correctAns2 = "=mode"
+	let answer2 = document.getElementById("mode").value;
+	
+		if(answer1 == correctAns1){
+			document.getElementById("correctSpot").innerHTML = "correct";
+			counter++;
+		}
+		if(!(answer1 == correctAns1)){
+			document.getElementById("correctSpot").innerHTML = "incorrect";
+			alert("The answer was: " + correctAns1);
+		}
+	}    
+
+	function correctAnswer2(){
+	let correctAns2 = "=mode"
+	let answer2 = document.getElementById("mode").value;
+	
+		if(answer2 == correctAns2){
+		document.getElementById("correctSpot2").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer2 == correctAns2)){
+		document.getElementById("correctSpot2").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns2);
+		}
+		
+	}
+	
+	function correctAnswer3(){
+	let correctAns3 = "=median"
+	let answer3 = document.getElementById("median").value;
+	
+		if(answer3 == correctAns3){
+		document.getElementById("correctSpot3").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer3 == correctAns3)){
+		document.getElementById("correctSpot3").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns3);
+		}
+		
+	}
+	
+	function correctAnswer4(){
+	let correctAns4 = "=stdey.p"
+	let answer4 = document.getElementById("stdvp").value;
+	
+		if(answer4 == correctAns4){
+		document.getElementById("correctSpot4").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer4 == correctAns4)){
+		document.getElementById("correctSpot4").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns4);
+		}
+		
+	}
+	
+	function correctAnswer5(){
+	let correctAns5 = "=stdey.s"
+	let answer5 = document.getElementById("stdvs").value;
+	
+		if(answer5 == correctAns5){
+		document.getElementById("correctSpot5").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer5 == correctAns5)){
+		document.getElementById("correctSpot5").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns5);
+		}
+		
+	}
+	
+	function correctAnswer6(){
+	let correctAns6 = "=maximum-minimum"
+	let answer6 = document.getElementById("range").value;
+	
+		if(answer6 == correctAns6){
+		document.getElementById("correctSpot6").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer6 == correctAns6)){
+		document.getElementById("correctSpot6").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns6);
+		}
+		
+	}
+	
+	function correctAnswer7(){
+	let correctAns7 = "=quartile3-quartile1"
+	let answer7 = document.getElementById("iqr").value;
+	
+		if(answer7 == correctAns7){
+		document.getElementById("correctSpot7").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer7 == correctAns7)){
+		document.getElementById("correctSpot7").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns7);
+		}
+		
+	}
+	
+	function correctAnswer8(){
+	let correctAns8 = "=min"
+	let correctAns8a = "=QUARTILE.EXC(array,0)"
+	let answer8 = document.getElementById("min").value;
+	
+		if(answer8 == correctAns8 || answer8 == correctAns8a ){
+		document.getElementById("correctSpot8").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer8 == correctAns8) && !(answer8 == correctAns8a)){
+		document.getElementById("correctSpot8").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns8 + " or " + correctAns8a);
+		}
+		
+	}
+	
+	function correctAnswer9(){
+	let correctAns9 = "=QUARTILE.EXC(array,1)"
+	let answer9 = document.getElementById("q1").value;
+	
+		if(answer9 == correctAns9 ){
+		document.getElementById("correctSpot9").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer9 == correctAns9)){
+		document.getElementById("correctSpot9").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns9);
+		}
+		
+	}
+	
+	function correctAnswer10(){
+	let correctAns10 = "=median"
+	let correctAns10a = "=QUARTILE.EXC(array,2)"
+	let answer10 = document.getElementById("q2").value;
+	
+		if(answer10 == correctAns10 || answer10 == correctAns10a ){
+		document.getElementById("correctSpot10").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer10 == correctAns10) && !(answer10 == correctAns10a)){
+		document.getElementById("correctSpot10").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns10 + " or " + correctAns10a);
+		}
+		
+	}
+	
+	function correctAnswer11(){
+	let correctAns11 = "=QUARTILE.EXC(array,3)"
+	let answer11 = document.getElementById("q3").value;
+	
+		if(answer11 == correctAns11 ){
+		document.getElementById("correctSpot11").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer11 == correctAns11)){
+		document.getElementById("correctSpot11").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns11);
+		}
+	}
+	
+	function correctAnswer12(){
+	let correctAns12 = "=max"
+	let correctAns12a = "=QUARTILE.EXC(array,4)"
+	let answer12 = document.getElementById("q4").value;
+	
+		if(answer12 == correctAns12 || answer12 == correctAns12a ){
+		document.getElementById("correctSpot12").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer12 == correctAns12) && !(answer12 == correctAns12a)){
+		document.getElementById("correctSpot12").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns12 + " or " + correctAns12a);
+		}
+		
+	function correctAnswer13(){
+	let correctAns13 = "=Q1-(1.5*IQR)"
+	let answer13 = document.getElementById("lowf").value;
+	
+		if(answer13 == correctAns13 ){
+		document.getElementById("correctSpot13").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer13 == correctAns13)){
+		document.getElementById("correctSpot13").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns13);
+		}
+	}
+	
+	function correctAnswer14(){
+	let correctAns14 = "=Q3+(1.5*IQR)"
+	let answer14 = document.getElementById("upf").value;
+	
+		if(answer14 == correctAns14 ){
+		document.getElementById("correctSpot14").innerHTML = "correct";
+		counter++;
+		}
+		if(!(answer14 == correctAns14)){
+		document.getElementById("correctSpot14").innerHTML = "incorrect";
+		alert("The answer was: " + correctAns14);
+		}
+	}
+		
+	}
+	function total(){
+		alert("You scored " + counter);
+	}
+	
+	//Slides functions
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	  }
+	  x[slideIndex-1].style.display = "block";
+	}
+
+</script>
+	

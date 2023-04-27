@@ -1,0 +1,31 @@
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  font-family: 'Sigmar One', cursive;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: purple;
+
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: Black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Sigmar One', cursive;
+  font-size: 150%;
+}
+
+body {
+ background-image: url("marv.jpg");
+ background-size: 1500px 1000px;
+}
+
